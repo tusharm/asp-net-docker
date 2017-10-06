@@ -18,4 +18,4 @@ namespace MvcMovie
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
     }
-}
+}   
