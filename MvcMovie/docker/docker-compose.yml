@@ -1,0 +1,11 @@
+version: '3.3'
+
+services:
+  db:
+    container_name: db
+    build: ./db
+    environment:
+      - ACCEPT_EULA=y
+      - sa_password=DockerOnW!nd0ws
+    ports:
+      - "1433"  
