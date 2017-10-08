@@ -2,6 +2,8 @@
 
 The repo contains a dockerised version of ASP.NET MVC [tutorial](https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/) and includes Docker Compose setup to spin up the web and db components in separrate containers.
 
+It needs Docker for Windows running in "Windows Containers" mode. 
+
 #### Features
 
 + Windows Docker containers (microsoft/aspnet, microsoft/mssql-server-windows-developer)
