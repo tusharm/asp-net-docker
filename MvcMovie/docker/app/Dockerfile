@@ -1,8 +1,12 @@
 ﻿FROM microsoft/aspnet:latest
+SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop';"]
 
-COPY ./docker/enable-iis-management.ps1 /setup/
+WORKDIR C:\\init 
+
+COPY ./docker/app/*.ps1 ./
+RUN .\enable-iis-management.ps1 -Verbose
+RUN .\install-sqlserver-tools.ps1 -Verbose
+
 COPY ./bin/Release/PublishOutput /inetpub/wwwroot
-
-RUN powershell.exe -executionpolicy bypass /setup/enable-iis-management.ps1
 
 EXPOSE 80 8172

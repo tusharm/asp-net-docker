@@ -1,11 +1,14 @@
-﻿# create admin user for remote connection
+﻿
+param()
+
+Write-Verbose "Creating admin user for remote management.."
 net user iisadmin "!!Sadmin*" /add
 net localgroup "Administrators" "iisadmin" /add
 
-# install web management features
+Write-Verbose "Enabling remote management.."
+
 Import-Module servermanager
 Add-WindowsFeature web-mgmt-service
 
-# enable remote management
 Set-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\WebManagement\Server -Name EnableRemoteManagement -Value 1
-Start-Service wmsvc
+Set-Service -Name wmsvc -StartupType automatic

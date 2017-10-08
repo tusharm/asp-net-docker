@@ -172,7 +172,9 @@
     </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <None Include="docker\Dockerfile" />
+    <Content Include="docker\db\create-db.sql" />
+    <Content Include="docker\db\initialize-db.ps1" />
+    <None Include="docker\db\Dockerfile" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -184,7 +186,6 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="docker\enable-iis-management.ps1" />
     <None Include="Properties\PublishProfiles\ForDocker.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

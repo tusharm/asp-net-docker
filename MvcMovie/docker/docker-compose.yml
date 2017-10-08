@@ -8,4 +8,12 @@ services:
       - ACCEPT_EULA=y
       - sa_password=DockerOnW!nd0ws
     ports:
-      - "1433"  
+      - "1433" 
+  web:
+    container_name: web
+    build:
+      context: ../
+      dockerfile: ./docker/app/Dockerfile
+    ports:
+      - "80"
+      - "8172"       
