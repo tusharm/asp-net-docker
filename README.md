@@ -8,6 +8,7 @@ It needs Docker for Windows running in "Windows Containers" mode.
 
 + Windows Docker containers (microsoft/aspnet, microsoft/mssql-server-windows-developer)
 + ASP.NET MVC app and MSSQL Server running in separate containers
++ Project build assets bind-mounted into the container (see [this](https://blog.sixeyed.com/docker-volumes-on-windows-the-case-of-the-g-drive/)) -> make local changes, re-publish and the container will pick up changes 
 + Connect IIS Manager to IIS running inside the container
 + Connect SSMS to MSSQL running inside the container
 
@@ -20,5 +21,4 @@ It needs Docker for Windows running in "Windows Containers" mode.
 
 #### TODO
 
-+ Create a custom virtual directory (instead of `/inetpub/wwwroot/`) - this will allow bind-mounting application assets, rather than copying them into the image (see [this](https://blog.sixeyed.com/docker-volumes-on-windows-the-case-of-the-g-drive/))
 + Connect Event Viewer to IIS logs in containers    
