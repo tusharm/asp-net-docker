@@ -1,6 +1,6 @@
 ### ASP.NET MVC 5 Sample Application in Windows Container
 
-The repo contains a dockerised version of ASP.NET MVC [tutorial](https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/) and includes Docker Compose setup to spin up the web and db components in separrate containers.
+The repo contains a dockerised version of ASP.NET MVC [tutorial](https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/) and includes Docker Compose setup to spin up the web and db components in separate containers.
 
 It needs Docker for Windows running in "Windows Containers" mode. 
 
@@ -15,7 +15,7 @@ It needs Docker for Windows running in "Windows Containers" mode.
 
 ##### Steps
 
-+ Create a Publish Profile to publish the assets in the folder `bin\Release\PublishOutput` (this directory is copied into the web container during docker build)
++ Create a Publish Profile to publish the assets in the folder `bin\Release\PublishOutput` (this directory is mounted into the web container, see docker-compose.yml)
 + Inside `docker` directory, run `docker-compose up -d` to start the containers
 + Get the IP address of the `web` container (`docker inspect web`) and navigate to `http://<ip-address>/`, `http://<ip-address>/HelloWorld` or `http://<ip-address>/Movies`
 
