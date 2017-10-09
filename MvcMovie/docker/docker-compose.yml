@@ -11,9 +11,9 @@ services:
       - "1433" 
   web:
     container_name: web
-    build:
-      context: ../
-      dockerfile: ./docker/web/Dockerfile
+    build: ./web
+    volumes:
+      - "../bin/Release/PublishOutput:C:\\website" 
     ports:
       - "80"
       - "8172"       
