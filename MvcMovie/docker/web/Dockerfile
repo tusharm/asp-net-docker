@@ -3,10 +3,10 @@ SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop';"]
 
 WORKDIR C:\\init 
 
-COPY ./docker/app/*.ps1 ./
+COPY docker/web/*.ps1 ./
 RUN .\enable-iis-management.ps1 -Verbose
 RUN .\install-sqlserver-tools.ps1 -Verbose
 
-COPY ./bin/Release/PublishOutput /inetpub/wwwroot
+COPY bin/Release/PublishOutput C:\\inetpub\\wwwroot
 
 EXPOSE 80 8172
