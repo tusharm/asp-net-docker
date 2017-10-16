@@ -1,4 +1,4 @@
-FROM microsoft/mssql-server-windows-developer:latest
+FROM microsoft/mssql-server-windows-developer:2017
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop';"]
 
 ENV sa_password _

@@ -1,4 +1,4 @@
-﻿FROM microsoft/aspnet:latest
+﻿FROM microsoft/aspnet:windowsservercore-10.0.14393.1770
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop';"]
 
 # this is used in creating a mapped drive in configure-website.ps1 script
